@@ -1,7 +1,7 @@
-FROM mcr.microsoft.com/dotnet/core/sdk:2.2-alpine3.9
+FROM mcr.microsoft.com/dotnet/core/sdk:3.0-buster
 
-LABEL maintainer="martin.brandl@whiteduck.de" \
-org.label-schema.vcs-url="https://github.com/mjisaak/docker-dotnetcore-angular"
+LABEL maintainer="info@enricleon.com" \
+org.label-schema.vcs-url="https://github.com/enricleon/docker-dotnetcore-angular"
 
 RUN apk update && apk add --update --no-cache nodejs-current nodejs-npm python make g++ \
 && npm install -g npm \
