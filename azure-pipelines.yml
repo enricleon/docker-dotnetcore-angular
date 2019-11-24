@@ -14,15 +14,15 @@ steps:
   displayName: 'Build an image'
   inputs:
     containerregistrytype: 'Container Registry'
-    dockerRegistryConnection: 'dockerhub-mjibrandl'
-    imageName: 'mjibrandl/dotnetcore-angular:$(Build.BuildId)'
+    dockerRegistryConnection: 'dockerhub-enricleon'
+    imageName: 'enricleon/dotnetcore-angular:$(Build.BuildId)'
     includeLatestTag: true
 
 - task: Docker@0
   displayName: 'Push an image'
   inputs:
     containerregistrytype: 'Container Registry'
-    dockerRegistryConnection: 'dockerhub-mjibrandl'
+    dockerRegistryConnection: 'dockerhub-enricleon'
     action: 'Push an image'
-    imageName: 'mjibrandl/dotnetcore-angular:$(Build.BuildId)'
+    imageName: 'enricleon/dotnetcore-angular:$(Build.BuildId)'
     includeLatestTag: true
