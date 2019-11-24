@@ -27,14 +27,13 @@ COPY ["MyAngular.csproj", "./"]
 RUN dotnet restore "./MyAngular.csproj"
 COPY . .
 WORKDIR "/src"
-RUN dotnet build "MyAngular.csproj" -c Release -o /app
+RUN dotnet build "MyAngular.csproj" -c Release -o /app/build
 
 FROM build AS publish
-
-RUN dotnet publish "MyAngular.csproj" -c Release -o /app
+RUN dotnet publish "MyAngular.csproj" -c Release -o /app/publish
 
 FROM base AS final
 WORKDIR /app
-COPY --from=publish /app .
+COPY --from=publish /app/publish .
 ENTRYPOINT ["dotnet", "MyAngular.dll"]
 ```
