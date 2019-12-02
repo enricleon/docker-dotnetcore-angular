@@ -9,8 +9,6 @@ This image is based on *dotnet/core/sdk:3.0* and contains everything you need to
 
 The image will reduce your build time to a minimum since you don't have to run ```npm rebuild node-sass``` for every build.
 
-[![Build Status](https://dev.azure.com/enricleon/dockerhub-dotnetcore-angular/_apis/build/status/mjisaak.docker-dotnetcore-angular?branchName=master)](https://dev.azure.com/enricleon/dockerhub-dotnetcore-angular/_build/latest?definitionId=4&branchName=master)
-
 # Usage
 
 Consider you created a project using ```dotnet new angular -o MyAngular```, all you need to containerize your project is the following Dockerfile:
